@@ -1,0 +1,3 @@
+../src/apb_dut.sv
+../src/apb_dut_wrapper.sv
+../src/apb_mem.sv
