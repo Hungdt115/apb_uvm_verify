@@ -29,7 +29,7 @@
 <div class = fileHTMLlayout>
 
 <div class='fileSummary'>
-<font size='2' face='verdana' padding-left:'2px'><b> File Summary of ../env/apb_master_directed_sequence.sv </b></font>
+<font size='2' face='verdana' padding-left:'2px'><b> File Summary of /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv </b></font>
 <br clear=all>
 <br clear=all>
 <font face='arial' color=black style='font-size: 12px'>
@@ -50,7 +50,7 @@
 <td class='fileSummaryTable' bgcolor='#BCC7CC' width='70px'> Show Toggle Coverage </td>
 </tr>
 <tr>
-<td class='fileSummaryTable'>6</td>
+<td class='fileSummaryTable'>8</td>
 <td class='fileSummaryTable'>1</td>
 <td class='fileSummaryTable'>1</td>
 <td class='fileSummaryTable'>0</td>
@@ -92,10 +92,10 @@ openFileContent('button_file_togglecov');">
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_linecov'>
 <button class='fileCollapsible' id='button_file_linecov'> <font size='4' color=#009933> &#9776; </font>
- Statement Coverage of File 6 : ../env/apb_master_directed_sequence.sv</button> 
+ Statement Coverage of File 8 : /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv</button> 
 <div class='fileContent'>
 <br clear=all>
-<font size='2' face='arial' style='padding-left:6px'> Statement Coverage Summary for File : ../env/apb_master_directed_sequence.sv</font>
+<font size='2' face='arial' style='padding-left:6px'> Statement Coverage Summary for File : /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv</font>
 <br clear=all>
 <table class='fileScoreTable'>
 <tr>
@@ -122,277 +122,397 @@ openFileContent('button_file_togglecov');">
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>1</td>
-<td class='lineTable'> <pre class='codegrey'>class apb_master_directed_sequence extends uvm_sequence #(apb_transaction);</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>// ============================================================================</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>2</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>//  Module      : apb_dut</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>3</td>
-<td class='lineTable'> <pre class='codegrey'>  //-- Register with factory</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>//  Description : APB4-compliant module that instances apb_mem.</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>4</td>
-<td class='lineTable'> <pre class='codegrey'>  `uvm_object_utils(apb_master_directed_sequence)</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>//                Retains original port list, with unused master ports driven to default.</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>5</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>//</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>6</td>
-<td class='lineTable'> <pre class='codegrey'>  //-- Sequence length</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>//  Author      : hungdt110520@gmail.com</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>7</td>
-<td class='lineTable'> <pre class='codegrey'>  rand int sequence_length;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>//  Date        : 2025-07-21</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>8</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>// ============================================================================</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>9</td>
-<td class='lineTable'> <pre class='codegrey'>  //-- Constraint: sequence_length must be less than 100</pre> </td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>10</td>
-<td class='lineTable'> <pre class='codegrey'>  constraint length_c {sequence_length inside {[1 : 99]};}</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>module apb_dut (</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>11</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    input  logic         pclk,       // APB clock (from top)</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>12</td>
-<td class='lineTable'> <pre class='codegrey'>  //-- Flag to track whether config_db provided sequence_length</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    input  logic         presetn,    // APB resetn (from top)</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>13</td>
-<td class='lineTable'> <pre class='codegrey'>  bit status = 0;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>14</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    // APB4 Slave Interface (from APB master in testbench)</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>15</td>
-<td class='lineTable'> <pre class='codegrey'>  //-- Constructor</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    input  logic         s_pwrite,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>16</td>
-<td class='lineTable'> <pre class='codegrey'>  function new(string name = "");</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    input  logic         s_psel,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>17</td>
-<td class='lineTable'> <pre class='codegrey'>    super.new(name);</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    input  logic         s_penable,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>18</td>
-<td class='lineTable'> <pre class='codegrey'>    assert (this.randomize());  // Randomize when sequence is created</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    input  logic [31:0]  s_paddr,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>19</td>
-<td class='lineTable'> <pre class='codegrey'>  endfunction</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    input  logic [31:0]  s_pwdata,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>20</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    input  logic [3:0]   s_pstrb,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>21</td>
-<td class='lineTable'> <pre class='codegrey'>  //-- Main body</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    input  logic [2:0]   s_pprot, // unused by apb_mem</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>22</td>
-<td class='lineTable'> <pre class='codegrey'>  task body();</pre> </td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>23</td>
-<td class='lineTable'> <pre class='codegrey'>    apb_transaction tr;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output logic         s_pready,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>24</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output logic         s_pslverr,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>25</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output logic [31:0]  s_prdata,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>26</td>
-<td class='lineTable'> <pre class='codegrey'>    for (int i = 0; i &lt sequence_length; i++) begin</pre> </td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>27</td>
-<td class='lineTable'> <pre class='codegrey'>      // ---- Write transaction ----</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    // APB4 Master Interface (to APB slave in testbench, now unused)</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>28</td>
-<td class='lineTable'> <pre class='codegrey'>      tr = apb_transaction::type_id::create("tr_write",, get_full_name());</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output logic         m_pwrite,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>29</td>
-<td class='lineTable'> <pre class='codegrey'>      tr.addr = 32'h0000_0000 + i * 4;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output logic         m_psel,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>30</td>
-<td class='lineTable'> <pre class='codegrey'>      tr.pwrite = apb_transaction::WRITE;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output logic         m_penable,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>31</td>
-<td class='lineTable'> <pre class='codegrey'>      tr.data = 32'hA000_0000 + i;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output logic [31:0]  m_paddr,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>32</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output logic [31:0]  m_pwdata,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>33</td>
-<td class='lineTable'> <pre class='codegrey'>      start_item(tr);</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output logic [3:0]   m_pstrb,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>34</td>
-<td class='lineTable'> <pre class='codegrey'>      finish_item(tr);</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output logic [2:0]   m_pprot,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>35</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    input  logic         m_pready,  // Unused by apb_mem</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>36</td>
-<td class='lineTable'> <pre class='codegrey'>      // ---- Read transaction ----</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    input  logic         m_pslverr, // Unused by apb_mem</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>37</td>
-<td class='lineTable'> <pre class='codegrey'>      tr = apb_transaction::type_id::create("tr_read",, get_full_name());</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    input  logic [31:0]  m_prdata   // Unused by apb_mem</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>38</td>
-<td class='lineTable'> <pre class='codegrey'>      tr.addr = 32'h0000_0000 + i * 4;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    );</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>39</td>
-<td class='lineTable'> <pre class='codegrey'>      tr.pwrite = apb_transaction::READ;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>40</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    // Drive unused master outputs to default values</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>41</td>
-<td class='lineTable'> <pre class='codegrey'>      start_item(tr);</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_pwrite   = 1'b0;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>42</td>
-<td class='lineTable'> <pre class='codegrey'>      finish_item(tr);</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_psel     = 1'b0;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>43</td>
-<td class='lineTable'> <pre class='codegrey'>    end</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_penable  = 1'b0;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>44</td>
-<td class='lineTable'> <pre class='codegrey'>  endtask</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_paddr    = 32'b0;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>45</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_pwdata   = 32'b0;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>46</td>
-<td class='lineTable'> <pre class='codegrey'>endclass</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_pstrb    = 4'b0;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>47</td>
+<td class='lineTable'> <pre class='codegrey'>    assign m_pprot    = 3'b0;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>48</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>49</td>
+<td class='lineTable'> <pre class='codegrey'>    // Instance of apb_mem</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>50</td>
+<td class='lineTable'> <pre class='codegrey'>    // Connect apb_dut's slave interface to apb_mem's interface</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>51</td>
+<td class='lineTable'> <pre class='codegrey'>    apb_mem i_apb_mem (</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>52</td>
+<td class='lineTable'> <pre class='codegrey'>        .PCLK   (pclk),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>53</td>
+<td class='lineTable'> <pre class='codegrey'>        .PRESETn(presetn),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>54</td>
+<td class='lineTable'> <pre class='codegrey'>        .PSEL   (s_psel),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>55</td>
+<td class='lineTable'> <pre class='codegrey'>        .PENABLE(s_penable),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>56</td>
+<td class='lineTable'> <pre class='codegrey'>        .PWRITE (s_pwrite),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>57</td>
+<td class='lineTable'> <pre class='codegrey'>        .PADDR(s_paddr),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>58</td>
+<td class='lineTable'> <pre class='codegrey'>        .PWDATA(s_pwdata),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>59</td>
+<td class='lineTable'> <pre class='codegrey'>        .PSTRB(s_pstrb),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>60</td>
+<td class='lineTable'> <pre class='codegrey'>        .PPROT(s_pprot),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>61</td>
+<td class='lineTable'> <pre class='codegrey'>        .PREADY(s_pready),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>62</td>
+<td class='lineTable'> <pre class='codegrey'>        .PRDATA(s_prdata),</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>63</td>
+<td class='lineTable'> <pre class='codegrey'>        .PSLVERR(s_pslverr)</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>64</td>
+<td class='lineTable'> <pre class='codegrey'>    );</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>65</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>66</td>
+<td class='lineTable'> <pre class='codegrey'>endmodule</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
@@ -408,7 +528,7 @@ openFileContent('button_file_togglecov');">
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_branchcov'>
 <button class='fileBranchCollapsible' id='button_file_branchcov'> <font size='4' color=#003399> &#8380; </font>
- Branch Coverage of File 6 : ../env/apb_master_directed_sequence.sv</button> 
+ Branch Coverage of File 8 : /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv</button> 
 <div class='fileBranchContent'>
 <br clear=all>
 <font size='2' face='arial' style='padding-left:6px'>
@@ -423,7 +543,7 @@ openFileContent('button_file_togglecov');">
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_condcov'>
 <button class='fileCondCollapsible' id='button_file_condcov'> <font size='4' color=#b38f00> &#169; </font>
- Condition Coverage of File 6 : ../env/apb_master_directed_sequence.sv</button> 
+ Condition Coverage of File 8 : /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv</button> 
 <div class='fileCondContent'>
 <br clear=all>
 <font size='2' face='arial' style='padding-left:6px'>
@@ -438,78 +558,16 @@ openFileContent('button_file_togglecov');">
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_togglecov'>
 <button class='fileToggleCollapsible' id='button_file_togglecov'> <font size='4' color=#9999bb> &#8376; </font>
- Toggle Coverage of File 6 : ../env/apb_master_directed_sequence.sv</button> 
+ Toggle Coverage of File 8 : /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv</button> 
 <div class='fileToggleContent'>
 <br clear=all>
 <font size='2' face='arial' style='padding-left:6px'>
-Toggle Coverage Summary for File : ../env/apb_master_directed_sequence.sv
+ No Toggles in File 
+<br clear=all>
 </font>
-<br clear=all>
-<table class='fileScoreTable'>
-<tr>
-<th class='fileScoreTable' bgcolor='#DEE8EE'> Total Toggles Variables </th>
-<th class='fileScoreTable' bgcolor='#DEE8EE'> Covered Variables </th>
-<th class='fileScoreTable' bgcolor='#DEE8EE'> Uncovered Variables </th>
-<th class='fileScoreTable' bgcolor='#DEE8EE'> Score </th>
-</tr>
-<tr>
-<td class='fileScoreTable'>1</td>
-<td class='fileScoreTable'>0</td>
-<td class='fileScoreTable'>1</td>
-<td class='fileScoreTable' bgcolor='#FF0000'>0</td>
-</tr>
-</table>
-<br clear=all>
-<table class='fileScoreTable'>
-<tr>
-<th class='fileScoreTable' bgcolor='#DEE8EE'> </th>
-<th class='fileScoreTable' bgcolor='#DEE8EE'> Total </th>
-<th class='fileScoreTable' bgcolor='#DEE8EE'> Covered </th>
-<th class='fileScoreTable' bgcolor='#DEE8EE'> Toggle Coverage Score </th>
-</tr>
-<tr>
-<td class='fileScoreTable'> <font size='2'> Total Bits </font> </td>
-<td class='fileScoreTable'> <font size='2'>64</font> </td>
-<td class='fileScoreTable'> <font size='2'>0</font> </td>
-<td class='fileScoreTable' bgcolor='#FF0000'> <font size='2'>0</td>
-</tr>
-<tr>
-<td class='fileScoreTable'> <font size='2'> Bits 0->1 </font> </td>
-<td class='fileScoreTable'> <font size='2'>32</font> </td>
-<td class='fileScoreTable'> <font size='2'>0 </font> </td>
-<td class='fileScoreTable' bgcolor='#FF0000'> <font size='2'>0</font> </td>
-</tr>
-<tr>
-<td class='fileScoreTable'> <font size='2'> Bits 1->0 </font> </td>
-<td class='fileScoreTable'> <font size='2'>32</font> </td>
-<td class='fileScoreTable'> <font size='2'>0</font> </td>
-<td class='fileScoreTable' bgcolor='#FF0000'> <font size='2'>0</font> </td>
-</tr>
-</table>
-<br clear=all>
-<div class='toggleCoverageTable'>
-<table class='lineTable' id='sortable1'>
-<tr>
-<th class='lineTable' style='background-color:#FFDD99; line-height:1;' width='80px' onclick='sortTable(1,0)'> LineNumber <button class='sortbutton1'> &#8645; </button></th>
-<th class='lineTable' style='background-color:#FFDD99; line-height:1;' width='80px' onclick='sortTable(1,1)'> Variable Type <button class='sortbutton1'> &#8645; </button></th>
-<th class='lineTable' style='background-color:#FFEB99; line-height:0;' onclick='sortTable(1,2)'> Variable <button class='sortbutton1'> &#8645; </button></th>
-<th class='lineTable' style='background-color:#80FFBF; line-height:1;' width='120px'> Toggle 0->1 </th>
-<th class='lineTable' style='background-color:#80FFBF; line-height:1;' width='120px'> Toggle 1->0 </th>
-</tr>
-<tr class='lineTableHoverRed'>
-<td class='lineTable'>26</td>
-<td class='lineTable'>int</td>
-<td class='lineTable'> <pre class='codered'> All bits of i</pre> </td>
-<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
-<td class='lineTable'> <pre class='codered'> 0 </pre> </td>
-</tr>
-</table>
 </div>
 <br clear=all>
 </div>
-<br clear=all>
-</div>
-</font>
 </div>
 </div>
 </div>
@@ -517,6 +575,5 @@ Toggle Coverage Summary for File : ../env/apb_master_directed_sequence.sv
 <script type='text/javascript' src='jsCodeCov/fileCollapse.js'></script>
 <script type='text/javascript' src='jsCodeCov/checkdisplay.js'></script>
 <script> function openFileContent(id) {document.getElementById(id).click();} </script>
-<script> sortTable(1,0) </script>
 </body>
 </html>

@@ -106,7 +106,7 @@ top_test.dut_wrapper.dut.i_apb_mem </td>
 <td class='instancesSummaryTable'>87.5</td>
 <td class='instancesSummaryTable'>100</td>
 <td class='instancesSummaryTable'>0</td>
-<td class='instancesSummaryTable'>7</td>
+<td class='instancesSummaryTable'>8</td>
 <td class='instancesSummaryTable' align='left'> 
 <label class = 'instanceLineCovContainer'>
  <input type='checkbox' id='checkbox_instance1_linecov' onclick="checkdisplay('checkbox_instance1_linecov', 'instance1_linecov');
@@ -359,7 +359,7 @@ openFileContent('button_instance1_togglecov');">
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>36</td>
 <td class='lineTable'> <pre class='codegreen'>    if (PRESETn==0) begin</pre> </td>
-<td class='lineTable'>330</td>
+<td class='lineTable'>701</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
@@ -401,7 +401,7 @@ openFileContent('button_instance1_togglecov');">
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>43</td>
 <td class='lineTable'> <pre class='codegreen'>      case (apb_st)</pre> </td>
-<td class='lineTable'>328</td>
+<td class='lineTable'>699</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
@@ -413,25 +413,25 @@ openFileContent('button_instance1_togglecov');">
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>45</td>
 <td class='lineTable'> <pre class='codegreen'>          PRDATA &lt= 0;</pre> </td>
-<td class='lineTable'>248</td>
+<td class='lineTable'>525</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>46</td>
 <td class='lineTable'> <pre class='codegreen'>          if (PSEL && !PENABLE) begin</pre> </td>
-<td class='lineTable'>248</td>
+<td class='lineTable'>525</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>47</td>
 <td class='lineTable'> <pre class='codegreen'>            if (PWRITE) begin</pre> </td>
-<td class='lineTable'>79</td>
+<td class='lineTable'>173</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>48</td>
 <td class='lineTable'> <pre class='codegreen'>              apb_st &lt= W_ENABLE;</pre> </td>
-<td class='lineTable'>44</td>
+<td class='lineTable'>86</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
@@ -449,13 +449,13 @@ openFileContent('button_instance1_togglecov');">
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>51</td>
 <td class='lineTable'> <pre class='codegreen'>              apb_st &lt= R_ENABLE;</pre> </td>
-<td class='lineTable'>35</td>
+<td class='lineTable'>87</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>52</td>
 <td class='lineTable'> <pre class='codegreen'>              PRDATA &lt= mem[PADDR];</pre> </td>
-<td class='lineTable'>35</td>
+<td class='lineTable'>87</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
@@ -485,13 +485,13 @@ openFileContent('button_instance1_togglecov');">
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>57</td>
 <td class='lineTable'> <pre class='codegreen'>          if (PSEL && PENABLE && PWRITE) begin</pre> </td>
-<td class='lineTable'>44</td>
+<td class='lineTable'>86</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>58</td>
 <td class='lineTable'> <pre class='codegreen'>            mem[PADDR] &lt= PWDATA;</pre> </td>
-<td class='lineTable'>44</td>
+<td class='lineTable'>86</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
@@ -503,7 +503,7 @@ openFileContent('button_instance1_togglecov');">
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>60</td>
 <td class='lineTable'> <pre class='codegreen'>          apb_st &lt= SETUP;</pre> </td>
-<td class='lineTable'>44</td>
+<td class='lineTable'>86</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
@@ -521,7 +521,7 @@ openFileContent('button_instance1_togglecov');">
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>63</td>
 <td class='lineTable'> <pre class='codegreen'>          apb_st &lt= SETUP;</pre> </td>
-<td class='lineTable'>35</td>
+<td class='lineTable'>87</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
@@ -849,8 +849,8 @@ Branch Coverage Summary for Module : apb_mem
 <td class='lineTable'>36</td>
 <td class='lineTable'> <pre class='codegreen'>    if (PRESETn==0) begin</pre>
  <font face='arial' color=orange style='font-size: 12px'><b> Branch 1</b></font></td>
-<td class='lineTable'>330</td>
-<td class='lineTable'>2T 328F </td>
+<td class='lineTable'>701</td>
+<td class='lineTable'>2T 699F </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>37</td>
@@ -922,14 +922,14 @@ Branch Coverage Summary for Module : apb_mem
 <td class='lineTable'> </td>
 <td class='lineTable' align ='left'> <pre class='codered'> MISSING ELSE </pre> <font face='arial' color=orange style='font-size: 12px'><b> Branch 3</b></font></td>
 <td class='lineTable'> </td>
-<td class='lineTable'> 169</td>
+<td class='lineTable'> 352</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>47</td>
 <td class='lineTable'> <pre class='codegreen'>            if (PWRITE) begin</pre>
  <font face='arial' color=orange style='font-size: 12px'><b> Branch 4</b></font></td>
-<td class='lineTable'>79</td>
-<td class='lineTable'>44T 35F </td>
+<td class='lineTable'>173</td>
+<td class='lineTable'>86T 87F </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>48</td>
@@ -947,8 +947,8 @@ Branch Coverage Summary for Module : apb_mem
 <td class='lineTable'>50</td>
 <td class='lineTable'> <pre class='codegreen'>            else begin</pre>
  <font face='arial' color=orange style='font-size: 12px'><b> Branch 5</b></font></td>
-<td class='lineTable'>35</td>
-<td class='lineTable'>35T </td>
+<td class='lineTable'>87</td>
+<td class='lineTable'>87T </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>51</td>
@@ -990,8 +990,8 @@ Branch Coverage Summary for Module : apb_mem
 <td class='lineTable'>57</td>
 <td class='lineTable'> <pre class='codegreen'>          if (PSEL && PENABLE && PWRITE) begin</pre>
  <font face='arial' color=orange style='font-size: 12px'><b> Branch 6</b></font></td>
-<td class='lineTable'>44</td>
-<td class='lineTable'>44T 0F </td>
+<td class='lineTable'>86</td>
+<td class='lineTable'>86T 0F </td>
 </tr>
 <tr class='lineTableHoverRed'>
 <td class='lineTable'> </td>
@@ -1028,7 +1028,7 @@ Branch Coverage Summary for Module : apb_mem
 <td class='lineTable'> <pre class='codegreen'>        R_ENABLE: begin</pre>
  <font face='arial' color=orange style='font-size: 12px'><b> Branch 8</b></font></td>
 <td class='lineTable'> </td>
-<td class='lineTable'>35T </td>
+<td class='lineTable'>87T </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>63</td>
@@ -1148,17 +1148,17 @@ Condition Coverage Summary for Module : apb_mem
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>36</td>
 <td class='lineTable'> <pre class='codegreen'>(PRESETn == 0)__TRUE</pre> </td>
-<td class='lineTable'>82 </td>
+<td class='lineTable'>176 </td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'> </td>
 <td class='lineTable'> <pre class='codegreen'>(PRESETn == 0)__FALSE</pre> </td>
-<td class='lineTable'>496 </td>
+<td class='lineTable'>1050 </td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>46</td>
 <td class='lineTable'> <pre class='codegreen'>(!PENABLE)__TRUE</pre> </td>
-<td class='lineTable'>334 </td>
+<td class='lineTable'>690 </td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'> </td>
@@ -1214,7 +1214,7 @@ Condition Coverage Summary for Module : apb_mem
 </font>
 <br clear=all>
 <font size='2' face='arial' style='padding-left:10px'>
- Instance declaration in File : 7 &nbsp; /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv &nbsp;&nbsp;  at Line Number 51</font>
+ Instance declaration in File : 8 &nbsp; /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv &nbsp;&nbsp;  at Line Number 51</font>
 <br clear=all>
 <br clear=all>
 <div class='lineCoverageTable'>
@@ -1402,7 +1402,7 @@ Condition Coverage Summary for Module : apb_mem
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>36</td>
 <td class='lineTable'> <pre class='codegreen'>    if (PRESETn==0) begin</pre> </td>
-<td class='lineTable'>330</td>
+<td class='lineTable'>701</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
@@ -1444,7 +1444,7 @@ Condition Coverage Summary for Module : apb_mem
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>43</td>
 <td class='lineTable'> <pre class='codegreen'>      case (apb_st)</pre> </td>
-<td class='lineTable'>328</td>
+<td class='lineTable'>699</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
@@ -1456,25 +1456,25 @@ Condition Coverage Summary for Module : apb_mem
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>45</td>
 <td class='lineTable'> <pre class='codegreen'>          PRDATA &lt= 0;</pre> </td>
-<td class='lineTable'>248</td>
+<td class='lineTable'>525</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>46</td>
 <td class='lineTable'> <pre class='codegreen'>          if (PSEL && !PENABLE) begin</pre> </td>
-<td class='lineTable'>248</td>
+<td class='lineTable'>525</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>47</td>
 <td class='lineTable'> <pre class='codegreen'>            if (PWRITE) begin</pre> </td>
-<td class='lineTable'>79</td>
+<td class='lineTable'>173</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>48</td>
 <td class='lineTable'> <pre class='codegreen'>              apb_st &lt= W_ENABLE;</pre> </td>
-<td class='lineTable'>44</td>
+<td class='lineTable'>86</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
@@ -1492,13 +1492,13 @@ Condition Coverage Summary for Module : apb_mem
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>51</td>
 <td class='lineTable'> <pre class='codegreen'>              apb_st &lt= R_ENABLE;</pre> </td>
-<td class='lineTable'>35</td>
+<td class='lineTable'>87</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>52</td>
 <td class='lineTable'> <pre class='codegreen'>              PRDATA &lt= mem[PADDR];</pre> </td>
-<td class='lineTable'>35</td>
+<td class='lineTable'>87</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
@@ -1528,13 +1528,13 @@ Condition Coverage Summary for Module : apb_mem
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>57</td>
 <td class='lineTable'> <pre class='codegreen'>          if (PSEL && PENABLE && PWRITE) begin</pre> </td>
-<td class='lineTable'>44</td>
+<td class='lineTable'>86</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>58</td>
 <td class='lineTable'> <pre class='codegreen'>            mem[PADDR] &lt= PWDATA;</pre> </td>
-<td class='lineTable'>44</td>
+<td class='lineTable'>86</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
@@ -1546,7 +1546,7 @@ Condition Coverage Summary for Module : apb_mem
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>60</td>
 <td class='lineTable'> <pre class='codegreen'>          apb_st &lt= SETUP;</pre> </td>
-<td class='lineTable'>44</td>
+<td class='lineTable'>86</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
@@ -1564,7 +1564,7 @@ Condition Coverage Summary for Module : apb_mem
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>63</td>
 <td class='lineTable'> <pre class='codegreen'>          apb_st &lt= SETUP;</pre> </td>
-<td class='lineTable'>35</td>
+<td class='lineTable'>87</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
@@ -1675,7 +1675,7 @@ Condition Coverage Summary for Module : apb_mem
 </font>
 <br clear=all>
 <font size='2' face='arial' style='padding-left:10px'>
- Instance declaration in File : 7 &nbsp; /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv &nbsp;&nbsp;  at Line Number 51</font>
+ Instance declaration in File : 8 &nbsp; /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv &nbsp;&nbsp;  at Line Number 51</font>
 <br clear=all>
 <br clear=all>
 <div class='branchCoverageTable'>
@@ -1900,8 +1900,8 @@ Condition Coverage Summary for Module : apb_mem
 <td class='lineTable'>36</td>
 <td class='lineTable'> <pre class='codegreen'>    if (PRESETn==0) begin</pre>
  <font face='arial' color=orange style='font-size: 12px'><b> Branch 1</b></font></td>
-<td class='lineTable'>330</td>
-<td class='lineTable'>2T 328F </td>
+<td class='lineTable'>701</td>
+<td class='lineTable'>2T 699F </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>37</td>
@@ -1973,14 +1973,14 @@ Condition Coverage Summary for Module : apb_mem
 <td class='lineTable'> </td>
 <td class='lineTable' align ='left'> <pre class='codered'> MISSING ELSE </pre> <font face='arial' color=orange style='font-size: 12px'><b> Branch 3</b></font></td>
 <td class='lineTable'> </td>
-<td class='lineTable'> 169</td>
+<td class='lineTable'> 352</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>47</td>
 <td class='lineTable'> <pre class='codegreen'>            if (PWRITE) begin</pre>
  <font face='arial' color=orange style='font-size: 12px'><b> Branch 4</b></font></td>
-<td class='lineTable'>79</td>
-<td class='lineTable'>44T 35F </td>
+<td class='lineTable'>173</td>
+<td class='lineTable'>86T 87F </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>48</td>
@@ -1998,8 +1998,8 @@ Condition Coverage Summary for Module : apb_mem
 <td class='lineTable'>50</td>
 <td class='lineTable'> <pre class='codegreen'>            else begin</pre>
  <font face='arial' color=orange style='font-size: 12px'><b> Branch 5</b></font></td>
-<td class='lineTable'>35</td>
-<td class='lineTable'>35T </td>
+<td class='lineTable'>87</td>
+<td class='lineTable'>87T </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>51</td>
@@ -2041,8 +2041,8 @@ Condition Coverage Summary for Module : apb_mem
 <td class='lineTable'>57</td>
 <td class='lineTable'> <pre class='codegreen'>          if (PSEL && PENABLE && PWRITE) begin</pre>
  <font face='arial' color=orange style='font-size: 12px'><b> Branch 6</b></font></td>
-<td class='lineTable'>44</td>
-<td class='lineTable'>44T 0F </td>
+<td class='lineTable'>86</td>
+<td class='lineTable'>86T 0F </td>
 </tr>
 <tr class='lineTableHoverRed'>
 <td class='lineTable'> </td>
@@ -2079,7 +2079,7 @@ Condition Coverage Summary for Module : apb_mem
 <td class='lineTable'> <pre class='codegreen'>        R_ENABLE: begin</pre>
  <font face='arial' color=orange style='font-size: 12px'><b> Branch 8</b></font></td>
 <td class='lineTable'> </td>
-<td class='lineTable'>35T </td>
+<td class='lineTable'>87T </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>63</td>
@@ -2199,17 +2199,17 @@ Condition Coverage Summary for Instance : top_test.dut_wrapper.dut.i_apb_mem
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>36</td>
 <td class='lineTable'> <pre class='codegreen'>(PRESETn == 0)__TRUE</pre> </td>
-<td class='lineTable'>82 </td>
+<td class='lineTable'>176 </td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'> </td>
 <td class='lineTable'> <pre class='codegreen'>(PRESETn == 0)__FALSE</pre> </td>
-<td class='lineTable'>496 </td>
+<td class='lineTable'>1050 </td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>46</td>
 <td class='lineTable'> <pre class='codegreen'>(!PENABLE)__TRUE</pre> </td>
-<td class='lineTable'>334 </td>
+<td class='lineTable'>690 </td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'> </td>

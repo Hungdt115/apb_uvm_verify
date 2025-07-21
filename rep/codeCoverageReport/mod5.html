@@ -45,7 +45,7 @@
 </tr>
 <tr>
 <td class='moduleSummaryTable'>1</td>
-<td class='moduleSummaryTable'>82.6087</td>
+<td class='moduleSummaryTable'>100</td>
 <td class='moduleSummaryTable'>0</td>
 <td class='moduleSummaryTable'>0</td>
 <td class='moduleSummaryTable'>0</td>
@@ -158,11 +158,11 @@ openFileContent('button_instance1_togglecov');">
 <th class='fileScoreTable' bgcolor='#DEE8EE'> Statement Coverage Score </th>
 </tr>
 <tr>
-<td class='fileScoreTable'>13</td>
-<td class='fileScoreTable'>23</td>
-<td class='fileScoreTable' bgcolor='#FFFFC2'>19</td>
-<td class='fileScoreTable' bgcolor='#FFD2D2'>4</td>
-<td class='fileScoreTable' bgcolor='#98FF98'>82.6087</td>
+<td class='fileScoreTable'>12</td>
+<td class='fileScoreTable'>21</td>
+<td class='fileScoreTable' bgcolor='#98FF98'>21</td>
+<td class='fileScoreTable' bgcolor='#98FF98'> 0 </td>
+<td class='fileScoreTable' bgcolor='#98FF98'>100</td>
 </tr>
 </table>
 <br clear=all>
@@ -185,38 +185,38 @@ openFileContent('button_instance1_togglecov');">
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>15</td>
 <td class='lineTable'> <pre class='codegreen'>//--------------------------------------------------------------------</pre> </td>
-<td class='lineTable'>160</td>
-<td class='lineTable'>3</td>
+<td class='lineTable'>2</td>
+<td class='lineTable'>7</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>16</td>
 <td class='lineTable'> <pre class='codegreen'> </pre> </td>
-<td class='lineTable'>84</td>
-<td class='lineTable'>1</td>
+<td class='lineTable'>14</td>
+<td class='lineTable'>2</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>17</td>
 <td class='lineTable'> <pre class='codegreen'>module top_test();</pre> </td>
-<td class='lineTable'>3</td>
-<td class='lineTable'>3</td>
+<td class='lineTable'>4</td>
+<td class='lineTable'>5</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>18</td>
 <td class='lineTable'> <pre class='codegreen'> </pre> </td>
-<td class='lineTable'>259</td>
-<td class='lineTable'>4</td>
+<td class='lineTable'>782</td>
+<td class='lineTable'>5</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>19</td>
 <td class='lineTable'> <pre class='codegreen'>  //-- APB Slave Interface (input side to DUT)</pre> </td>
-<td class='lineTable'>485</td>
-<td class='lineTable'>7</td>
+<td class='lineTable'>4</td>
+<td class='lineTable'>3</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>20</td>
 <td class='lineTable'> <pre class='codegreen'>  apb_if slave_vif();</pre> </td>
-<td class='lineTable'>1</td>
-<td class='lineTable'>3</td>
+<td class='lineTable'>348</td>
+<td class='lineTable'>4</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>21</td>
@@ -227,247 +227,247 @@ openFileContent('button_instance1_togglecov');">
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>22</td>
 <td class='lineTable'> <pre class='codegreen'>  //-- APB Master Interface (output side from DUT)</pre> </td>
-<td class='lineTable'>2</td>
-<td class='lineTable'>4</td>
+<td class='lineTable'>1570</td>
+<td class='lineTable'>8</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>23</td>
 <td class='lineTable'> <pre class='codegreen'>  apb_if master_vif();</pre> </td>
-<td class='lineTable'>161</td>
-<td class='lineTable'>3</td>
+<td class='lineTable'>175</td>
+<td class='lineTable'>2</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>24</td>
 <td class='lineTable'> <pre class='codegreen'> </pre> </td>
-<td class='lineTable'>83</td>
-<td class='lineTable'>6</td>
+<td class='lineTable'>354</td>
+<td class='lineTable'>8</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>25</td>
 <td class='lineTable'> <pre class='codegreen'>  //-- DUT Wrapper Instance</pre> </td>
-<td class='lineTable'>82</td>
-<td class='lineTable'>3</td>
+<td class='lineTable'>5</td>
+<td class='lineTable'>4</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>26</td>
 <td class='lineTable'> <pre class='codegreen'>  apb_dut_wrapper dut_wrapper (</pre> </td>
-<td class='lineTable'>83</td>
-<td class='lineTable'>4</td>
+<td class='lineTable'>94</td>
+<td class='lineTable'>7</td>
 </tr>
-<tr class='lineTableHoverGreen'>
+<tr class='lineTableHoverRed'>
 <td class='lineTable'>27</td>
-<td class='lineTable'> <pre class='codegreen'>    // Slave side (inputs)</pre> </td>
-<td class='lineTable'>80</td>
-<td class='lineTable'>1</td>
+<td class='lineTable'> <pre class='codered'>    // Slave side (inputs)</pre> </td>
+<td class='lineTable'> 0 </td>
+<td class='lineTable'>4 </td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>28</td>
-<td class='lineTable'> <pre class='codegreen'>    .pclk    (slave_vif.pclk),</pre> </td>
-<td class='lineTable'>82</td>
-<td class='lineTable'>2</td>
+<td class='lineTable'> <pre class='codegreen'>    .pclk      (slave_vif.pclk),</pre> </td>
+<td class='lineTable'>265</td>
+<td class='lineTable'>4</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>29</td>
-<td class='lineTable'> <pre class='codegreen'>    .presetn (slave_vif.presetn),</pre> </td>
-<td class='lineTable'>81</td>
-<td class='lineTable'>3</td>
+<td class='lineTable'> <pre class='codegreen'>    .presetn   (slave_vif.presetn),</pre> </td>
+<td class='lineTable'>351</td>
+<td class='lineTable'>7</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>30</td>
 <td class='lineTable'> <pre class='codegreen'>    .s_paddr   (slave_vif.paddr),</pre> </td>
-<td class='lineTable'>82</td>
-<td class='lineTable'>3</td>
+<td class='lineTable'>175</td>
+<td class='lineTable'>4</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>31</td>
 <td class='lineTable'> <pre class='codegreen'>    .s_pwrite  (slave_vif.pwrite),</pre> </td>
 <td class='lineTable'>4</td>
-<td class='lineTable'>5</td>
+<td class='lineTable'>6</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>32</td>
 <td class='lineTable'> <pre class='codegreen'>    .s_psel    (slave_vif.psel),</pre> </td>
-<td class='lineTable'>164</td>
+<td class='lineTable'>351</td>
 <td class='lineTable'>5</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>33</td>
 <td class='lineTable'> <pre class='codegreen'>    .s_penable (slave_vif.penable),</pre> </td>
-<td class='lineTable'>37</td>
-<td class='lineTable'>4</td>
+<td class='lineTable'>439</td>
+<td class='lineTable'>9</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>34</td>
 <td class='lineTable'> <pre class='codegreen'>    .s_pwdata  (slave_vif.pwdata),</pre> </td>
-<td class='lineTable'>46</td>
-<td class='lineTable'>2</td>
+<td class='lineTable'>87</td>
+<td class='lineTable'>3</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>35</td>
 <td class='lineTable'> <pre class='codegreen'>    .s_pstrb   (slave_vif.pstrb),</pre> </td>
-<td class='lineTable'>161</td>
+<td class='lineTable'>175</td>
 <td class='lineTable'>3</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>36</td>
 <td class='lineTable'> <pre class='codegreen'>    .s_pprot   (slave_vif.pprot),</pre> </td>
-<td class='lineTable'>45</td>
-<td class='lineTable'>2</td>
+<td class='lineTable'>435</td>
+<td class='lineTable'>4</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>37</td>
 <td class='lineTable'> <pre class='codegreen'>    .s_prdata  (slave_vif.prdata),</pre> </td>
-<td class='lineTable'>170</td>
-<td class='lineTable'>3</td>
+<td class='lineTable'>697</td>
+<td class='lineTable'>6</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>38</td>
 <td class='lineTable'> <pre class='codegreen'>    .s_pready  (slave_vif.pready),</pre> </td>
-<td class='lineTable'>171</td>
-<td class='lineTable'>5</td>
+<td class='lineTable'>177</td>
+<td class='lineTable'>6</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>39</td>
 <td class='lineTable'> <pre class='codegreen'>    .s_pslverr (slave_vif.pslverr),</pre> </td>
-<td class='lineTable'>171</td>
-<td class='lineTable'>4</td>
+<td class='lineTable'>178</td>
+<td class='lineTable'>7</td>
 </tr>
-<tr class='lineTableHoverRed'>
+<tr class='lineTableHoverGreen'>
 <td class='lineTable'>40</td>
-<td class='lineTable'> <pre class='codered'> </pre> </td>
-<td class='lineTable'> 0 </td>
-<td class='lineTable'>1 </td>
+<td class='lineTable'> <pre class='codegreen'> </pre> </td>
+<td class='lineTable'>436</td>
+<td class='lineTable'>3</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>41</td>
 <td class='lineTable'> <pre class='codegreen'>    // Master side (outputs)</pre> </td>
-<td class='lineTable'>35</td>
-<td class='lineTable'>3</td>
+<td class='lineTable'>87</td>
+<td class='lineTable'>4</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>42</td>
-<td class='lineTable'> <pre class='codegreen'>    // .pclk    (master_vif.pclk),</pre> </td>
-<td class='lineTable'>150</td>
-<td class='lineTable'>3</td>
+<td class='lineTable'> <pre class='codegreen'>    .m_paddr   (master_vif.paddr),</pre> </td>
+<td class='lineTable'>261</td>
+<td class='lineTable'>6</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>43</td>
-<td class='lineTable'> <pre class='codegreen'>    // .presetn (master_vif.presetn),</pre> </td>
-<td class='lineTable'>105</td>
+<td class='lineTable'> <pre class='codegreen'>    .m_pwrite  (master_vif.pwrite),</pre> </td>
+<td class='lineTable'>261</td>
 <td class='lineTable'>5</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>44</td>
-<td class='lineTable'> <pre class='codegreen'>    .m_paddr   (master_vif.paddr),</pre> </td>
-<td class='lineTable'>105</td>
-<td class='lineTable'>4</td>
+<td class='lineTable'> <pre class='codegreen'>    .m_psel    (master_vif.psel),</pre> </td>
+<td class='lineTable'>436</td>
+<td class='lineTable'>3</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>45</td>
-<td class='lineTable'> <pre class='codegreen'>    .m_pwrite  (master_vif.pwrite),</pre> </td>
-<td class='lineTable'>70</td>
-<td class='lineTable'>2</td>
+<td class='lineTable'> <pre class='codegreen'>    .m_penable (master_vif.penable),</pre> </td>
+<td class='lineTable'>348</td>
+<td class='lineTable'>5</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>46</td>
-<td class='lineTable'> <pre class='codegreen'>    .m_psel    (master_vif.psel),</pre> </td>
-<td class='lineTable'>115</td>
-<td class='lineTable'>2</td>
+<td class='lineTable'> <pre class='codegreen'>    .m_pwdata  (master_vif.pwdata),</pre> </td>
+<td class='lineTable'>262</td>
+<td class='lineTable'>3</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>47</td>
-<td class='lineTable'> <pre class='codegreen'>    .m_penable (master_vif.penable),</pre> </td>
-<td class='lineTable'>35</td>
-<td class='lineTable'>2</td>
+<td class='lineTable'> <pre class='codegreen'>    .m_pstrb   (master_vif.pstrb),</pre> </td>
+<td class='lineTable'>176</td>
+<td class='lineTable'>3</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>48</td>
-<td class='lineTable'> <pre class='codegreen'>    .m_pwdata  (master_vif.pwdata),</pre> </td>
-<td class='lineTable'>35</td>
-<td class='lineTable'>4</td>
+<td class='lineTable'> <pre class='codegreen'>    .m_pprot   (master_vif.pprot),</pre> </td>
+<td class='lineTable'>89</td>
+<td class='lineTable'>5</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>49</td>
-<td class='lineTable'> <pre class='codegreen'>    .m_pstrb   (master_vif.pstrb),</pre> </td>
-<td class='lineTable'>80</td>
-<td class='lineTable'>6</td>
+<td class='lineTable'> <pre class='codegreen'>    .m_prdata  (master_vif.prdata),</pre> </td>
+<td class='lineTable'>87</td>
+<td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>50</td>
-<td class='lineTable'> <pre class='codegreen'>    .m_pprot   (master_vif.pprot),</pre> </td>
-<td class='lineTable'>80</td>
-<td class='lineTable'>4</td>
+<td class='lineTable'> <pre class='codegreen'>    .m_pready  (master_vif.pready),</pre> </td>
+<td class='lineTable'>435</td>
+<td class='lineTable'>2</td>
 </tr>
-<tr class='lineTableHoverGrey'>
+<tr class='lineTableHoverGreen'>
 <td class='lineTable'>51</td>
-<td class='lineTable'> <pre class='codegrey'>    .m_prdata  (master_vif.prdata),</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
+<td class='lineTable'> <pre class='codegreen'>    .m_pslverr (master_vif.pslverr)</pre> </td>
+<td class='lineTable'>2</td>
+<td class='lineTable'>2</td>
 </tr>
-<tr class='lineTableHoverRed'>
+<tr class='lineTableHoverGreen'>
 <td class='lineTable'>52</td>
-<td class='lineTable'> <pre class='codered'>    .m_pready  (master_vif.pready),</pre> </td>
-<td class='lineTable'> 0 </td>
-<td class='lineTable'>2 </td>
+<td class='lineTable'> <pre class='codegreen'>  );</pre> </td>
+<td class='lineTable'>348</td>
+<td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>53</td>
-<td class='lineTable'> <pre class='codegreen'>    .m_pslverr (master_vif.pslverr)</pre> </td>
-<td class='lineTable'>80</td>
+<td class='lineTable'> <pre class='codegreen'> </pre> </td>
+<td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>54</td>
-<td class='lineTable'> <pre class='codegreen'>  );</pre> </td>
-<td class='lineTable'>45</td>
-<td class='lineTable'>1</td>
+<td class='lineTable'> <pre class='codegreen'>  //--------------------------------------------------------------------</pre> </td>
+<td class='lineTable'>88</td>
+<td class='lineTable'>2</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>55</td>
-<td class='lineTable'> <pre class='codegreen'> </pre> </td>
-<td class='lineTable'>125</td>
+<td class='lineTable'> <pre class='codegreen'>  //-- Clock Generation</pre> </td>
+<td class='lineTable'>87</td>
 <td class='lineTable'>2</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>56</td>
 <td class='lineTable'> <pre class='codegreen'>  //--------------------------------------------------------------------</pre> </td>
-<td class='lineTable'>45</td>
+<td class='lineTable'>87</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>57</td>
-<td class='lineTable'> <pre class='codegreen'>  //-- Clock Generation</pre> </td>
-<td class='lineTable'>45</td>
-<td class='lineTable'>2</td>
-</tr>
-<tr class='lineTableHoverRed'>
-<td class='lineTable'>58</td>
-<td class='lineTable'> <pre class='codered'>  //--------------------------------------------------------------------</pre> </td>
-<td class='lineTable'> 0 </td>
-<td class='lineTable'>1 </td>
-</tr>
-<tr class='lineTableHoverGreen'>
-<td class='lineTable'>59</td>
 <td class='lineTable'> <pre class='codegreen'>  initial begin</pre> </td>
-<td class='lineTable'>45</td>
-<td class='lineTable'>2</td>
-</tr>
-<tr class='lineTableHoverGreen'>
-<td class='lineTable'>60</td>
-<td class='lineTable'> <pre class='codegreen'>    slave_vif.pclk = 1'b0;</pre> </td>
-<td class='lineTable'>1</td>
+<td class='lineTable'>87</td>
 <td class='lineTable'>3</td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>61</td>
+<td class='lineTable'>58</td>
+<td class='lineTable'> <pre class='codegreen'>    slave_vif.pclk = 1'b0;</pre> </td>
+<td class='lineTable'>1</td>
+<td class='lineTable'>1</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>59</td>
 <td class='lineTable'> <pre class='codegreen'>    forever #5 slave_vif.pclk = ~slave_vif.pclk;</pre> </td>
-<td class='lineTable'>46</td>
+<td class='lineTable'>88</td>
 <td class='lineTable'>4</td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>60</td>
+<td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>61</td>
+<td class='lineTable'> <pre class='codegreen'> </pre> </td>
+<td class='lineTable'>87</td>
+<td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>62</td>
-<td class='lineTable'> <pre class='codegreen'>  end</pre> </td>
-<td class='lineTable'>45</td>
+<td class='lineTable'> <pre class='codegreen'>  assign master_vif.pclk = slave_vif.pclk;</pre> </td>
+<td class='lineTable'>87</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
@@ -476,75 +476,75 @@ openFileContent('button_instance1_togglecov');">
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
-<tr class='lineTableHoverGrey'>
+<tr class='lineTableHoverGreen'>
 <td class='lineTable'>64</td>
-<td class='lineTable'> <pre class='codegrey'>  assign master_vif.pclk = slave_vif.pclk;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>65</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>66</td>
-<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverRed'>
-<td class='lineTable'>67</td>
-<td class='lineTable'> <pre class='codered'>  //-- Reset Generation</pre> </td>
-<td class='lineTable'> 0 </td>
-<td class='lineTable'>1 </td>
-</tr>
-<tr class='lineTableHoverRed'>
-<td class='lineTable'>68</td>
-<td class='lineTable'> <pre class='codered'>  //--------------------------------------------------------------------</pre> </td>
-<td class='lineTable'> 0 </td>
-<td class='lineTable'>2 </td>
-</tr>
-<tr class='lineTableHoverRed'>
-<td class='lineTable'>69</td>
-<td class='lineTable'> <pre class='codered'>  initial begin</pre> </td>
-<td class='lineTable'> 0 </td>
-<td class='lineTable'>1 </td>
+<td class='lineTable'> <pre class='codegreen'>  //--------------------------------------------------------------------</pre> </td>
+<td class='lineTable'>1</td>
+<td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>70</td>
+<td class='lineTable'>65</td>
+<td class='lineTable'> <pre class='codegreen'>  //-- Reset Generation</pre> </td>
+<td class='lineTable'>2</td>
+<td class='lineTable'>2</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>66</td>
+<td class='lineTable'> <pre class='codegreen'>  //--------------------------------------------------------------------</pre> </td>
+<td class='lineTable'>1</td>
+<td class='lineTable'>1</td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>67</td>
+<td class='lineTable'> <pre class='codegrey'>  initial begin</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>68</td>
 <td class='lineTable'> <pre class='codegreen'>    slave_vif.presetn = 1'b1;</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>71</td>
+<td class='lineTable'>69</td>
 <td class='lineTable'> <pre class='codegreen'>    #15;</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>72</td>
+<td class='lineTable'>70</td>
 <td class='lineTable'> <pre class='codegreen'>    slave_vif.presetn = 1'b0;</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>73</td>
+<td class='lineTable'>71</td>
 <td class='lineTable'> <pre class='codegreen'>    #20;</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>74</td>
+<td class='lineTable'>72</td>
 <td class='lineTable'> <pre class='codegreen'>    slave_vif.presetn = 1'b1;</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>75</td>
+<td class='lineTable'>73</td>
 <td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>74</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>75</td>
+<td class='lineTable'> <pre class='codegrey'>  assign master_vif.presetn = slave_vif.presetn;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
@@ -556,13 +556,13 @@ openFileContent('button_instance1_togglecov');">
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>77</td>
-<td class='lineTable'> <pre class='codegrey'>  assign master_vif.presetn = slave_vif.presetn;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>78</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //-- UVM Test Execution</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
@@ -574,138 +574,108 @@ openFileContent('button_instance1_togglecov');">
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>80</td>
-<td class='lineTable'> <pre class='codegrey'>  //-- UVM Test Execution</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  initial begin</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>81</td>
-<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>82</td>
-<td class='lineTable'> <pre class='codegrey'>  initial begin</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>83</td>
 <td class='lineTable'> <pre class='codegrey'>    //-- Set virtual interface(s) for testbench</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>84</td>
+<td class='lineTable'>82</td>
 <td class='lineTable'> <pre class='codegreen'>    uvm_config_db#(virtual apb_if)::set(null, "*", "vif", slave_vif);</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>85</td>
+<td class='lineTable'>83</td>
 <td class='lineTable'> <pre class='codegreen'>    uvm_config_db#(virtual apb_if)::set(null, "*", "m_vif", master_vif);</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>86</td>
+<td class='lineTable'>84</td>
 <td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>87</td>
-<td class='lineTable'> <pre class='codegrey'>    //-- Set number of transactions</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGreen'>
-<td class='lineTable'>88</td>
-<td class='lineTable'> <pre class='codegreen'>    uvm_config_db#(int)::set(null, "*", "num_transactions", 5);</pre> </td>
-<td class='lineTable'>1</td>
-<td class='lineTable'>1</td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>89</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>90</td>
+<td class='lineTable'>85</td>
 <td class='lineTable'> <pre class='codegrey'>    //-- Run the test</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>91</td>
+<td class='lineTable'>86</td>
 <td class='lineTable'> <pre class='codegreen'>    run_test();</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>92</td>
+<td class='lineTable'>87</td>
 <td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>93</td>
+<td class='lineTable'>88</td>
 <td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>94</td>
+<td class='lineTable'>89</td>
 <td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>95</td>
+<td class='lineTable'>90</td>
 <td class='lineTable'> <pre class='codegrey'>  //-- Waveform Dumping</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>96</td>
+<td class='lineTable'>91</td>
 <td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>97</td>
+<td class='lineTable'>92</td>
 <td class='lineTable'> <pre class='codegrey'>  initial begin</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>98</td>
+<td class='lineTable'>93</td>
 <td class='lineTable'> <pre class='codegreen'>    $dumpfile("waveform.vcd");</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>99</td>
+<td class='lineTable'>94</td>
 <td class='lineTable'> <pre class='codegreen'>    $dumpvars;</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>100</td>
+<td class='lineTable'>95</td>
 <td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>101</td>
+<td class='lineTable'>96</td>
 <td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>102</td>
+<td class='lineTable'>97</td>
 <td class='lineTable'> <pre class='codegrey'>endmodule</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
@@ -771,9 +741,9 @@ openFileContent('button_instance1_togglecov');">
 <th class='fileScoreTable' bgcolor='#DEE8EE'> Statement Coverage Score </th>
 </tr>
 <tr>
-<td class='fileScoreTable'>13</td>
-<td class='fileScoreTable'>23</td>
-<td class='fileScoreTable' bgcolor='#98FF98'>23</td>
+<td class='fileScoreTable'>12</td>
+<td class='fileScoreTable'>21</td>
+<td class='fileScoreTable' bgcolor='#98FF98'>21</td>
 <td class='fileScoreTable' bgcolor='#98FF98'> 0 </td>
 <td class='fileScoreTable' bgcolor='#98FF98'>100</td>
 </tr>
@@ -875,13 +845,13 @@ openFileContent('button_instance1_togglecov');">
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>28</td>
-<td class='lineTable'> <pre class='codegrey'>    .pclk    (slave_vif.pclk),</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    .pclk      (slave_vif.pclk),</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>29</td>
-<td class='lineTable'> <pre class='codegrey'>    .presetn (slave_vif.presetn),</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    .presetn   (slave_vif.presetn),</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
@@ -959,85 +929,85 @@ openFileContent('button_instance1_togglecov');">
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>42</td>
-<td class='lineTable'> <pre class='codegrey'>    // .pclk    (master_vif.pclk),</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>43</td>
-<td class='lineTable'> <pre class='codegrey'>    // .presetn (master_vif.presetn),</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>44</td>
 <td class='lineTable'> <pre class='codegrey'>    .m_paddr   (master_vif.paddr),</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>45</td>
+<td class='lineTable'>43</td>
 <td class='lineTable'> <pre class='codegrey'>    .m_pwrite  (master_vif.pwrite),</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>46</td>
+<td class='lineTable'>44</td>
 <td class='lineTable'> <pre class='codegrey'>    .m_psel    (master_vif.psel),</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>47</td>
+<td class='lineTable'>45</td>
 <td class='lineTable'> <pre class='codegrey'>    .m_penable (master_vif.penable),</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>48</td>
+<td class='lineTable'>46</td>
 <td class='lineTable'> <pre class='codegrey'>    .m_pwdata  (master_vif.pwdata),</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>49</td>
+<td class='lineTable'>47</td>
 <td class='lineTable'> <pre class='codegrey'>    .m_pstrb   (master_vif.pstrb),</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>50</td>
+<td class='lineTable'>48</td>
 <td class='lineTable'> <pre class='codegrey'>    .m_pprot   (master_vif.pprot),</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>51</td>
+<td class='lineTable'>49</td>
 <td class='lineTable'> <pre class='codegrey'>    .m_prdata  (master_vif.prdata),</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>52</td>
+<td class='lineTable'>50</td>
 <td class='lineTable'> <pre class='codegrey'>    .m_pready  (master_vif.pready),</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>53</td>
+<td class='lineTable'>51</td>
 <td class='lineTable'> <pre class='codegrey'>    .m_pslverr (master_vif.pslverr)</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>54</td>
+<td class='lineTable'>52</td>
 <td class='lineTable'> <pre class='codegrey'>  );</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>55</td>
+<td class='lineTable'>53</td>
 <td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>54</td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>55</td>
+<td class='lineTable'> <pre class='codegrey'>  //-- Clock Generation</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
@@ -1049,37 +1019,37 @@ openFileContent('button_instance1_togglecov');">
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>57</td>
-<td class='lineTable'> <pre class='codegrey'>  //-- Clock Generation</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>58</td>
-<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>59</td>
 <td class='lineTable'> <pre class='codegrey'>  initial begin</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>60</td>
+<td class='lineTable'>58</td>
 <td class='lineTable'> <pre class='codegreen'>    slave_vif.pclk = 1'b0;</pre> </td>
 <td class='lineTable'>1</td>
-<td class='lineTable'>3</td>
+<td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>61</td>
+<td class='lineTable'>59</td>
 <td class='lineTable'> <pre class='codegreen'>    forever #5 slave_vif.pclk = ~slave_vif.pclk;</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>4</td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>62</td>
+<td class='lineTable'>60</td>
 <td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>61</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>62</td>
+<td class='lineTable'> <pre class='codegrey'>  assign master_vif.pclk = slave_vif.pclk;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
@@ -1091,13 +1061,13 @@ openFileContent('button_instance1_togglecov');">
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>64</td>
-<td class='lineTable'> <pre class='codegrey'>  assign master_vif.pclk = slave_vif.pclk;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>65</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //-- Reset Generation</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
@@ -1109,55 +1079,55 @@ openFileContent('button_instance1_togglecov');">
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>67</td>
-<td class='lineTable'> <pre class='codegrey'>  //-- Reset Generation</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>68</td>
-<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>69</td>
 <td class='lineTable'> <pre class='codegrey'>  initial begin</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>70</td>
+<td class='lineTable'>68</td>
 <td class='lineTable'> <pre class='codegreen'>    slave_vif.presetn = 1'b1;</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>71</td>
+<td class='lineTable'>69</td>
 <td class='lineTable'> <pre class='codegreen'>    #15;</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>72</td>
+<td class='lineTable'>70</td>
 <td class='lineTable'> <pre class='codegreen'>    slave_vif.presetn = 1'b0;</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>73</td>
+<td class='lineTable'>71</td>
 <td class='lineTable'> <pre class='codegreen'>    #20;</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>74</td>
+<td class='lineTable'>72</td>
 <td class='lineTable'> <pre class='codegreen'>    slave_vif.presetn = 1'b1;</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>75</td>
+<td class='lineTable'>73</td>
 <td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>74</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>75</td>
+<td class='lineTable'> <pre class='codegrey'>  assign master_vif.presetn = slave_vif.presetn;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
@@ -1169,13 +1139,13 @@ openFileContent('button_instance1_togglecov');">
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>77</td>
-<td class='lineTable'> <pre class='codegrey'>  assign master_vif.presetn = slave_vif.presetn;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>78</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //-- UVM Test Execution</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
@@ -1187,138 +1157,108 @@ openFileContent('button_instance1_togglecov');">
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>80</td>
-<td class='lineTable'> <pre class='codegrey'>  //-- UVM Test Execution</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  initial begin</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>81</td>
-<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>82</td>
-<td class='lineTable'> <pre class='codegrey'>  initial begin</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>83</td>
 <td class='lineTable'> <pre class='codegrey'>    //-- Set virtual interface(s) for testbench</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>84</td>
+<td class='lineTable'>82</td>
 <td class='lineTable'> <pre class='codegreen'>    uvm_config_db#(virtual apb_if)::set(null, "*", "vif", slave_vif);</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>85</td>
+<td class='lineTable'>83</td>
 <td class='lineTable'> <pre class='codegreen'>    uvm_config_db#(virtual apb_if)::set(null, "*", "m_vif", master_vif);</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>86</td>
+<td class='lineTable'>84</td>
 <td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>87</td>
-<td class='lineTable'> <pre class='codegrey'>    //-- Set number of transactions</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGreen'>
-<td class='lineTable'>88</td>
-<td class='lineTable'> <pre class='codegreen'>    uvm_config_db#(int)::set(null, "*", "num_transactions", 5);</pre> </td>
-<td class='lineTable'>1</td>
-<td class='lineTable'>1</td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>89</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>90</td>
+<td class='lineTable'>85</td>
 <td class='lineTable'> <pre class='codegrey'>    //-- Run the test</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>91</td>
+<td class='lineTable'>86</td>
 <td class='lineTable'> <pre class='codegreen'>    run_test();</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>92</td>
+<td class='lineTable'>87</td>
 <td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>93</td>
+<td class='lineTable'>88</td>
 <td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>94</td>
+<td class='lineTable'>89</td>
 <td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>95</td>
+<td class='lineTable'>90</td>
 <td class='lineTable'> <pre class='codegrey'>  //-- Waveform Dumping</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>96</td>
+<td class='lineTable'>91</td>
 <td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>97</td>
+<td class='lineTable'>92</td>
 <td class='lineTable'> <pre class='codegrey'>  initial begin</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>98</td>
+<td class='lineTable'>93</td>
 <td class='lineTable'> <pre class='codegreen'>    $dumpfile("waveform.vcd");</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>99</td>
+<td class='lineTable'>94</td>
 <td class='lineTable'> <pre class='codegreen'>    $dumpvars;</pre> </td>
 <td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>100</td>
+<td class='lineTable'>95</td>
 <td class='lineTable'> <pre class='codegrey'>  end</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>101</td>
+<td class='lineTable'>96</td>
 <td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>102</td>
+<td class='lineTable'>97</td>
 <td class='lineTable'> <pre class='codegrey'>endmodule</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>

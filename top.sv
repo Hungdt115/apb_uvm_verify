@@ -25,8 +25,8 @@ module top_test();
   //-- DUT Wrapper Instance
   apb_dut_wrapper dut_wrapper (
     // Slave side (inputs)
-    .pclk    (slave_vif.pclk),
-    .presetn (slave_vif.presetn),
+    .pclk      (slave_vif.pclk),
+    .presetn   (slave_vif.presetn),
     .s_paddr   (slave_vif.paddr),
     .s_pwrite  (slave_vif.pwrite),
     .s_psel    (slave_vif.psel),
@@ -39,8 +39,6 @@ module top_test();
     .s_pslverr (slave_vif.pslverr),
 
     // Master side (outputs)
-    // .pclk    (master_vif.pclk),
-    // .presetn (master_vif.presetn),
     .m_paddr   (master_vif.paddr),
     .m_pwrite  (master_vif.pwrite),
     .m_psel    (master_vif.psel),
@@ -83,9 +81,6 @@ module top_test();
     //-- Set virtual interface(s) for testbench
     uvm_config_db#(virtual apb_if)::set(null, "*", "vif", slave_vif);
     uvm_config_db#(virtual apb_if)::set(null, "*", "m_vif", master_vif);
-
-    //-- Set number of transactions
-    uvm_config_db#(int)::set(null, "*", "num_transactions", 5);
 
     //-- Run the test
     run_test();

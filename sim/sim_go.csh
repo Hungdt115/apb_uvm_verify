@@ -41,7 +41,7 @@ echo "--------------------------------------------------"
 echo "----          Compile UVM testbench           ----"
 echo "--------------------------------------------------"
 
-xvlog -sv -i ../env -i ../src -i ../test -i ../sequences ../top.sv -L uvm --log ../log/xvlog_$TB_TOP.log
+xvlog -sv -i ../env -i ../src -i ../test  ../top.sv -L uvm --log ../log/xvlog_$TB_TOP.log
 
 if ($status != 0) then
   echo ""
@@ -87,4 +87,10 @@ if ($status != 0) then
   echo "##### Code coverage error   #####"
   echo ""
   exit 1
+endif
 
+rm -f *.log
+rm -f *.wdb
+rm -f *.pb
+rm -f *.jou
+rm -f *.out

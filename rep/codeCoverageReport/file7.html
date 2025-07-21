@@ -29,7 +29,7 @@
 <div class = fileHTMLlayout>
 
 <div class='fileSummary'>
-<font size='2' face='verdana' padding-left:'2px'><b> File Summary of /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv </b></font>
+<font size='2' face='verdana' padding-left:'2px'><b> File Summary of /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_if.sv </b></font>
 <br clear=all>
 <br clear=all>
 <font face='arial' color=black style='font-size: 12px'>
@@ -52,7 +52,7 @@
 <tr>
 <td class='fileSummaryTable'>7</td>
 <td class='fileSummaryTable'>1</td>
-<td class='fileSummaryTable'>1</td>
+<td class='fileSummaryTable'>2</td>
 <td class='fileSummaryTable'>0</td>
 <td class='fileSummaryTable'>0</td>
 <td class='fileSummaryTable'>0</td>
@@ -92,10 +92,10 @@ openFileContent('button_file_togglecov');">
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_linecov'>
 <button class='fileCollapsible' id='button_file_linecov'> <font size='4' color=#009933> &#9776; </font>
- Statement Coverage of File 7 : /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv</button> 
+ Statement Coverage of File 7 : /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_if.sv</button> 
 <div class='fileContent'>
 <br clear=all>
-<font size='2' face='arial' style='padding-left:6px'> Statement Coverage Summary for File : /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv</font>
+<font size='2' face='arial' style='padding-left:6px'> Statement Coverage Summary for File : /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_if.sv</font>
 <br clear=all>
 <table class='fileScoreTable'>
 <tr>
@@ -122,73 +122,73 @@ openFileContent('button_file_togglecov');">
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>1</td>
-<td class='lineTable'> <pre class='codegrey'>// ============================================================================</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>//----------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>2</td>
-<td class='lineTable'> <pre class='codegrey'>//  Module      : apb_dut</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>// Title      : APB Interface</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>3</td>
-<td class='lineTable'> <pre class='codegrey'>//  Description : APB4-compliant module that instances apb_mem.</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>// Description: </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>4</td>
-<td class='lineTable'> <pre class='codegrey'>//                Retains original port list, with unused master ports driven to default.</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>//   This file defines the Advanced Peripheral Bus (APB) interface.</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>5</td>
-<td class='lineTable'> <pre class='codegrey'>//</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>//   It includes all standard APB signals and provides modports for</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>6</td>
-<td class='lineTable'> <pre class='codegrey'>//  Author      : hungdt110520@gmail.com</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>//   master, slave, and monitor roles to specify signal directions.</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>7</td>
-<td class='lineTable'> <pre class='codegrey'>//  Date        : 2025-07-21</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>// Signal names are modified to follow a naming convention:</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>8</td>
-<td class='lineTable'> <pre class='codegrey'>// ============================================================================</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>//     - *_i: Input to module (driven by master)</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>9</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>//     - *_o: Output from module (driven by slave)</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>10</td>
-<td class='lineTable'> <pre class='codegrey'>module apb_dut (</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>//----------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>11</td>
-<td class='lineTable'> <pre class='codegrey'>    input  logic         pclk,       // APB clock (from top)</pre> </td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>12</td>
-<td class='lineTable'> <pre class='codegrey'>    input  logic         presetn,    // APB resetn (from top)</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>interface apb_if;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
@@ -200,319 +200,535 @@ openFileContent('button_file_togglecov');">
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>14</td>
-<td class='lineTable'> <pre class='codegrey'>    // APB4 Slave Interface (from APB master in testbench)</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>15</td>
-<td class='lineTable'> <pre class='codegrey'>    input  logic         s_pwrite,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  // Clock and Reset Signals</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>16</td>
-<td class='lineTable'> <pre class='codegrey'>    input  logic         s_psel,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>17</td>
-<td class='lineTable'> <pre class='codegrey'>    input  logic         s_penable,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  logic pclk;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>18</td>
-<td class='lineTable'> <pre class='codegrey'>    input  logic [31:0]  s_paddr,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  logic presetn;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>19</td>
-<td class='lineTable'> <pre class='codegrey'>    input  logic [31:0]  s_pwdata,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>20</td>
-<td class='lineTable'> <pre class='codegrey'>    input  logic [3:0]   s_pstrb,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>21</td>
-<td class='lineTable'> <pre class='codegrey'>    input  logic [2:0]   s_pprot, // unused by apb_mem</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  // APB Control Signals</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>22</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>23</td>
-<td class='lineTable'> <pre class='codegrey'>    output logic         s_pready,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  logic        psel;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>24</td>
-<td class='lineTable'> <pre class='codegrey'>    output logic         s_pslverr,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  logic        penable;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>25</td>
-<td class='lineTable'> <pre class='codegrey'>    output logic [31:0]  s_prdata,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  logic        pwrite;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>26</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  logic [3:0]  pstrb;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>27</td>
-<td class='lineTable'> <pre class='codegrey'>    // APB4 Master Interface (to APB slave in testbench, now unused)</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  logic [2:0]  pprot;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>28</td>
-<td class='lineTable'> <pre class='codegrey'>    output logic         m_pwrite,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>29</td>
-<td class='lineTable'> <pre class='codegrey'>    output logic         m_psel,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>30</td>
-<td class='lineTable'> <pre class='codegrey'>    output logic         m_penable,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  // APB Address and Data Signals</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>31</td>
-<td class='lineTable'> <pre class='codegrey'>    output logic [31:0]  m_paddr,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>32</td>
-<td class='lineTable'> <pre class='codegrey'>    output logic [31:0]  m_pwdata,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  logic [31:0] paddr;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>33</td>
-<td class='lineTable'> <pre class='codegrey'>    output logic [3:0]   m_pstrb,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  logic [31:0] pwdata;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>34</td>
-<td class='lineTable'> <pre class='codegrey'>    output logic [2:0]   m_pprot,</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  logic [31:0] prdata;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>35</td>
-<td class='lineTable'> <pre class='codegrey'>    input  logic         m_pready,  // Unused by apb_mem</pre> </td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>36</td>
-<td class='lineTable'> <pre class='codegrey'>    input  logic         m_pslverr, // Unused by apb_mem</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>37</td>
-<td class='lineTable'> <pre class='codegrey'>    input  logic [31:0]  m_prdata   // Unused by apb_mem</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  // APB Response Signals</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>38</td>
-<td class='lineTable'> <pre class='codegrey'>    );</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>39</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  logic pready;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>40</td>
-<td class='lineTable'> <pre class='codegrey'>    // Drive unused master outputs to default values</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  logic pslverr;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>41</td>
-<td class='lineTable'> <pre class='codegrey'>    assign m_pwrite   = 1'b0;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>42</td>
-<td class='lineTable'> <pre class='codegrey'>    assign m_psel     = 1'b0;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>43</td>
-<td class='lineTable'> <pre class='codegrey'>    assign m_penable  = 1'b0;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  // Modport for APB Master</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>44</td>
-<td class='lineTable'> <pre class='codegrey'>    assign m_paddr    = 32'b0;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>45</td>
-<td class='lineTable'> <pre class='codegrey'>    assign m_pwdata   = 32'b0;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>  modport master_cb (</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>46</td>
-<td class='lineTable'> <pre class='codegrey'>    assign m_pstrb    = 4'b0;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output paddr,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>47</td>
-<td class='lineTable'> <pre class='codegrey'>    assign m_pprot    = 3'b0;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output pwdata,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>48</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output pwrite,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>49</td>
-<td class='lineTable'> <pre class='codegrey'>    // Instance of apb_mem</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output psel,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>50</td>
-<td class='lineTable'> <pre class='codegrey'>    // Connect apb_dut's slave interface to apb_mem's interface</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output penable,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>51</td>
-<td class='lineTable'> <pre class='codegrey'>    apb_mem i_apb_mem (</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output pstrb,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>52</td>
-<td class='lineTable'> <pre class='codegrey'>        .PCLK   (pclk),</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    output pprot,</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>53</td>
-<td class='lineTable'> <pre class='codegrey'>        .PRESETn(presetn),</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>54</td>
-<td class='lineTable'> <pre class='codegrey'>        .PSEL   (s_psel),</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>55</td>
-<td class='lineTable'> <pre class='codegrey'>        .PENABLE(s_penable),</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>56</td>
-<td class='lineTable'> <pre class='codegrey'>        .PWRITE (s_pwrite),</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>57</td>
-<td class='lineTable'> <pre class='codegrey'>        .PADDR(s_paddr),</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>58</td>
-<td class='lineTable'> <pre class='codegrey'>        .PWDATA(s_pwdata),</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>59</td>
-<td class='lineTable'> <pre class='codegrey'>        .PSTRB(s_pstrb),</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>60</td>
-<td class='lineTable'> <pre class='codegrey'>        .PPROT(s_pprot),</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>61</td>
-<td class='lineTable'> <pre class='codegrey'>        .PREADY(s_pready),</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>62</td>
-<td class='lineTable'> <pre class='codegrey'>        .PRDATA(s_prdata),</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>63</td>
-<td class='lineTable'> <pre class='codegrey'>        .PSLVERR(s_pslverr)</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>64</td>
-<td class='lineTable'> <pre class='codegrey'>    );</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>65</td>
 <td class='lineTable'> <pre class='codegrey'> </pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
+<td class='lineTable'>54</td>
+<td class='lineTable'> <pre class='codegrey'>    input  prdata,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>55</td>
+<td class='lineTable'> <pre class='codegrey'>    input  pready,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>56</td>
+<td class='lineTable'> <pre class='codegrey'>    input  pslverr,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>57</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>58</td>
+<td class='lineTable'> <pre class='codegrey'>    input  pclk,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>59</td>
+<td class='lineTable'> <pre class='codegrey'>    input  presetn</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>60</td>
+<td class='lineTable'> <pre class='codegrey'>  );</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>61</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>62</td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>63</td>
+<td class='lineTable'> <pre class='codegrey'>  // Modport for APB Slave</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>64</td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>65</td>
+<td class='lineTable'> <pre class='codegrey'>  modport slave_cb (</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
 <td class='lineTable'>66</td>
-<td class='lineTable'> <pre class='codegrey'>endmodule</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>    input  paddr,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>67</td>
+<td class='lineTable'> <pre class='codegrey'>    input  pwdata,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>68</td>
+<td class='lineTable'> <pre class='codegrey'>    input  pwrite,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>69</td>
+<td class='lineTable'> <pre class='codegrey'>    input  psel,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>70</td>
+<td class='lineTable'> <pre class='codegrey'>    input  penable,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>71</td>
+<td class='lineTable'> <pre class='codegrey'>    input  pstrb,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>72</td>
+<td class='lineTable'> <pre class='codegrey'>    input  pprot,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>73</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>74</td>
+<td class='lineTable'> <pre class='codegrey'>    input  pclk,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>75</td>
+<td class='lineTable'> <pre class='codegrey'>    input  presetn,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>76</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>77</td>
+<td class='lineTable'> <pre class='codegrey'>    output prdata,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>78</td>
+<td class='lineTable'> <pre class='codegrey'>    output pready,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>79</td>
+<td class='lineTable'> <pre class='codegrey'>    output pslverr</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>80</td>
+<td class='lineTable'> <pre class='codegrey'>  );</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>81</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>82</td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>83</td>
+<td class='lineTable'> <pre class='codegrey'>  // Modport for APB Monitor</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>84</td>
+<td class='lineTable'> <pre class='codegrey'>  //--------------------------------------------------------------------</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>85</td>
+<td class='lineTable'> <pre class='codegrey'>  modport monitor_cb (</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>86</td>
+<td class='lineTable'> <pre class='codegrey'>    input  paddr,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>87</td>
+<td class='lineTable'> <pre class='codegrey'>    input  pwdata,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>88</td>
+<td class='lineTable'> <pre class='codegrey'>    input  pwrite,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>89</td>
+<td class='lineTable'> <pre class='codegrey'>    input  psel,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>90</td>
+<td class='lineTable'> <pre class='codegrey'>    input  penable,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>91</td>
+<td class='lineTable'> <pre class='codegrey'>    input  pstrb,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>92</td>
+<td class='lineTable'> <pre class='codegrey'>    input  pprot,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>93</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>94</td>
+<td class='lineTable'> <pre class='codegrey'>    input  prdata,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>95</td>
+<td class='lineTable'> <pre class='codegrey'>    input  pready,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>96</td>
+<td class='lineTable'> <pre class='codegrey'>    input  pslverr,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>97</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>98</td>
+<td class='lineTable'> <pre class='codegrey'>    input  pclk,</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>99</td>
+<td class='lineTable'> <pre class='codegrey'>    input  presetn</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>100</td>
+<td class='lineTable'> <pre class='codegrey'>  );</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>101</td>
+<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>102</td>
+<td class='lineTable'> <pre class='codegrey'>endinterface : apb_if</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
@@ -528,7 +744,7 @@ openFileContent('button_file_togglecov');">
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_branchcov'>
 <button class='fileBranchCollapsible' id='button_file_branchcov'> <font size='4' color=#003399> &#8380; </font>
- Branch Coverage of File 7 : /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv</button> 
+ Branch Coverage of File 7 : /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_if.sv</button> 
 <div class='fileBranchContent'>
 <br clear=all>
 <font size='2' face='arial' style='padding-left:6px'>
@@ -543,7 +759,7 @@ openFileContent('button_file_togglecov');">
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_condcov'>
 <button class='fileCondCollapsible' id='button_file_condcov'> <font size='4' color=#b38f00> &#169; </font>
- Condition Coverage of File 7 : /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv</button> 
+ Condition Coverage of File 7 : /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_if.sv</button> 
 <div class='fileCondContent'>
 <br clear=all>
 <font size='2' face='arial' style='padding-left:6px'>
@@ -558,7 +774,7 @@ openFileContent('button_file_togglecov');">
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_togglecov'>
 <button class='fileToggleCollapsible' id='button_file_togglecov'> <font size='4' color=#9999bb> &#8376; </font>
- Toggle Coverage of File 7 : /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_dut.sv</button> 
+ Toggle Coverage of File 7 : /home/hungdt/01_Verilog/02_apb_uvm_verify/src/apb_if.sv</button> 
 <div class='fileToggleContent'>
 <br clear=all>
 <font size='2' face='arial' style='padding-left:6px'>
