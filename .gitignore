@@ -16,3 +16,4 @@ log/
 *.exe
 *.DS_Store
 GEMINI.md
+*.bak

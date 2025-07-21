@@ -1,37 +1,34 @@
-class apb_env extends uvm_env;
-  `uvm_component_utils(apb_env)
-  
-  apb_wagent            wagent;
-  apb_ragent            ragent;
-  apb_scoreboard        scb;
-  apb_coverage_model    cm;
+class apb_env  extends uvm_env;
+ 
+   `uvm_component_utils(apb_env)
 
-  function new(string name, uvm_component parent);
-    super.new(name, parent);
-  endfunction
+   //ENV class will have agent as its sub component
+   apb_agent  agt;
+   apb_scoreboard scb;
+   apb_subscriber apb_subscriber_h;
   
-  function void build_phase(uvm_phase phase);
-    super.build_phase(phase);
-    wagent = apb_wagent :: type_id :: create ("wagent", this);
-    ragent = apb_ragent :: type_id :: create ("ragent", this);
-    scb = apb_scoreboard:: type_id :: create("scb",this);
-    cm = apb_coverage_model:: type_id :: create("cm",this);
+   //virtual interface for APB interface
+   virtual apb_if  vif;
 
-endfunction
+   function new(string name, uvm_component parent);
+      super.new(name, parent);
+   endfunction
+
+   //Build phase - Construct agent and get virtual interface handle from test  and pass it down to agent
+   function void build_phase(uvm_phase phase);
+     super.build_phase(phase);
+     agt = apb_agent::type_id::create("agt", this);
+     scb = apb_scoreboard::type_id::create("scb", this);
+     apb_subscriber_h=apb_subscriber::type_id::create("apn_subscriber_h",this);
+     if (!uvm_config_db#(virtual apb_if)::get(this, "", "vif", vif)) begin
+       `uvm_fatal("build phase", "No virtual interface specified for this env instance")
+     end
+     uvm_config_db#(virtual apb_if)::set( this, "agt", "vif", vif);
+   endfunction
   
    function void connect_phase(uvm_phase phase);
      super.connect_phase(phase);
-     //-- Connect the write monitor to the scoreboard's write FIFO
-     wagent.wmon.wap.connect(scb.write_fifo.analysis_export);
-     `uvm_info("ENV", "Connected Write Monitor to Scoreboard FIFO", UVM_LOW)
-
-     //-- Connect the read monitor to the scoreboard's read FIFO
-     ragent.rmon.rap.connect(scb.read_fifo.analysis_export);
-     `uvm_info("ENV", "Connected Read Monitor to Scoreboard FIFO", UVM_LOW)
-
-     //-- Connect monitors to the coverage model
-     wagent.wmon.wap.connect(cm.cm_export_write);
-     ragent.rmon.rap.connect(cm.cm_export_read);
-     `uvm_info("ENV", "Connected Monitors to Coverage Model", UVM_LOW)
+     agt.mon.ap.connect(scb.mon_export);
+     agt.mon.ap.connect(apb_subscriber_h.analysis_export);
    endfunction
 endclass

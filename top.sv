@@ -2,84 +2,93 @@
 //-- UVM Package and Macros
 import uvm_pkg::*;
 `include "uvm_macros.svh"
-
-//-- Core Environment Includes
-`include "env/apb_transaction.sv"
-`include "env/apb_sequencer.sv"
-`include "env/apb_wdriver.sv"
-`include "env/apb_wmonitor.sv"
-`include "env/apb_rmonitor.sv"
-`include "env/apb_wagent.sv"
-`include "env/apb_ragent.sv"
-`include "env/apb_scoreboard.sv"
-`include "env/apb_coverage_model.sv"
-`include "env/apb_env.sv"
 `include "apb_if.sv"
-
 //-- Test-related Includes
-`include "test/test_top.sv"
-
+`include "test_top.sv"
 
 //--------------------------------------------------------------------
-//-- Module: top_test
-//-- Description: 
-//--  Top-level module for the APB UVM testbench.
-//--  his module instantiates the DUT, the APB interface,
-//--  and starts the UVM test.
+// Module: top_test
+// Description:
+//   Top-level module for the APB UVM testbench using apb_dut_wrapper.
+//   Instantiates DUT wrapper and APB interfaces (slave/master),
+//   starts UVM test.
 //--------------------------------------------------------------------
+
 module top_test();
 
-  //-- APB Interface Instance  
-  apb_if vif();
+  //-- APB Slave Interface (input side to DUT)
+  apb_if slave_vif();
 
-  //-- DUT Instance
-  apb_dut dut (
-    .PCLK   (vif.PCLK),
-    .PRESETn (vif.PRESETn),
-    .PADDR  (vif.PADDR),
-    .PWRITE (vif.PWRITE),
-    .PSEL   (vif.PSEL),
-    .PENABLE(vif.PENABLE),
-    .PWDATA (vif.PWDATA),
-    .PRDATA (vif.PRDATA),
-    .PREADY (vif.PREADY),
-    .PSTRB  (vif.PSTRB),
-    //.PPROT  (vif.PPROT),
-    
-    .PSLVERR(vif.PSLVERR)
+  //-- APB Master Interface (output side from DUT)
+  apb_if master_vif();
+
+  //-- DUT Wrapper Instance
+  apb_dut_wrapper dut_wrapper (
+    // Slave side (inputs)
+    .pclk    (slave_vif.pclk),
+    .presetn (slave_vif.presetn),
+    .s_paddr   (slave_vif.paddr),
+    .s_pwrite  (slave_vif.pwrite),
+    .s_psel    (slave_vif.psel),
+    .s_penable (slave_vif.penable),
+    .s_pwdata  (slave_vif.pwdata),
+    .s_pstrb   (slave_vif.pstrb),
+    .s_pprot   (slave_vif.pprot),
+    .s_prdata  (slave_vif.prdata),
+    .s_pready  (slave_vif.pready),
+    .s_pslverr (slave_vif.pslverr),
+
+    // Master side (outputs)
+    // .pclk    (master_vif.pclk),
+    // .presetn (master_vif.presetn),
+    .m_paddr   (master_vif.paddr),
+    .m_pwrite  (master_vif.pwrite),
+    .m_psel    (master_vif.psel),
+    .m_penable (master_vif.penable),
+    .m_pwdata  (master_vif.pwdata),
+    .m_pstrb   (master_vif.pstrb),
+    .m_pprot   (master_vif.pprot),
+    .m_prdata  (master_vif.prdata),
+    .m_pready  (master_vif.pready),
+    .m_pslverr (master_vif.pslverr)
   );
 
   //--------------------------------------------------------------------
   //-- Clock Generation
   //--------------------------------------------------------------------
   initial begin
-    vif.PCLK = 1'b0;
-    forever #5 vif.PCLK = ~vif.PCLK;
+    slave_vif.pclk = 1'b0;
+    forever #5 slave_vif.pclk = ~slave_vif.pclk;
   end
+
+  assign master_vif.pclk = slave_vif.pclk;
 
   //--------------------------------------------------------------------
   //-- Reset Generation
   //--------------------------------------------------------------------
   initial begin
-    vif.PRESETn = 1'b1;
-    `uvm_info("APB_TOP", "Applying reset", UVM_LOW);
+    slave_vif.presetn = 1'b1;
     #15;
-    vif.PRESETn = 1'b0;
-    `uvm_info("APB_TOP", "Releasing reset", UVM_LOW);
+    slave_vif.presetn = 1'b0;
+    #20;
+    slave_vif.presetn = 1'b1;
   end
+
+  assign master_vif.presetn = slave_vif.presetn;
 
   //--------------------------------------------------------------------
   //-- UVM Test Execution
   //--------------------------------------------------------------------
   initial begin
-    //-- Set the virtual interface in the config database for the testbench
-    uvm_config_db#(virtual apb_if)::set(null, "*", "vif", vif);
+    //-- Set virtual interface(s) for testbench
+    uvm_config_db#(virtual apb_if)::set(null, "*", "vif", slave_vif);
+    uvm_config_db#(virtual apb_if)::set(null, "*", "m_vif", master_vif);
 
-    //-- Set the number of transactions for the test
-    uvm_config_db#(int)::set(null, "*", "num_transactions", 5); // Example: 20 transactions
+    //-- Set number of transactions
+    uvm_config_db#(int)::set(null, "*", "num_transactions", 5);
 
-    //-- Run the desired UVM test
-    run_test(); // Or "apb_directed_test"
+    //-- Run the test
+    run_test();
   end
 
   //--------------------------------------------------------------------
@@ -91,4 +100,3 @@ module top_test();
   end
 
 endmodule
-//====================================================================
